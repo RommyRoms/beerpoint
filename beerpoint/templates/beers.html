@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Пивная энциклопедия </title>
+</head>
+<body>
+    {% for beer in beers %}
+    <h2> <a href="{% url 'beer_list:detail_beer' beer.id %}"> Название пива: {{ beer.beer_name }} </a></h2>
+    <h4>Страна производитель: {{ beer.beer_country }} </h4>
+    <hr>
+    {% endfor %}
+</body>
+</html>
+
+
+
+
+
